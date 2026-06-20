@@ -103,11 +103,15 @@ checkpoints are bundled vs. regenerated.
 
 ## Pretrained checkpoints
 
-All trained weights are archived on **Zenodo**, split per experiment so you
-download only what you need, and re-evaluate any reported result without
-retraining:
+> **Double-blind review note.** To preserve author anonymity, the trained
+> weights are **not** hosted at a fixed public location during review. The
+> complete set of checkpoints will be **made available via an anonymous
+> download link upon request** (e.g., through the handling editor).
 
-> **Zenodo:** `<INSERT ZENODO DOI / RECORD URL>`
+Every result in the paper is reproducible **without** the checkpoints: each
+architecture retrains from scratch with the shipped code and fixed seeds (see the
+per-experiment READMEs). The checkpoints are provided only to let reviewers
+verify the reported numbers without retraining.
 
 | Archive | Experiment | Size |
 |---|---|---|
@@ -116,22 +120,18 @@ retraining:
 | `uTHCD-C-ckpts-03-writer_independent.tar` | 03 — writer-independent | 2.4 GB |
 | `uTHCD-C-ckpts-04-collapse_mechanism.tar` | 04 — MNASNet collapse | 0.14 GB |
 
+Once the anonymous link has been provided, set it in
+`scripts/fetch_checkpoints.sh` and run:
+
 ```bash
-# set ZENODO_RECORD (the numeric record id) in the script, then:
 bash scripts/fetch_checkpoints.sh           # all experiments
 bash scripts/fetch_checkpoints.sh 03        # just writer-independent (2.4 GB)
 ```
 
 Each archive unpacks at the repo root into the layout the eval scripts expect and
-ships a `SHA256SUMS-*.txt`. The 36 writer-independent checkpoints are *also*
-bundled directly in this repo (`checkpoints/`), so experiment 03 reproduces with
-no download. See [`checkpoints/MANIFEST.md`](checkpoints/MANIFEST.md).
-
-> **During anonymous peer review**, the weights can instead be mirrored on an
-> anonymous Google Drive (upload from an account with no identifying name). Set
-> `SOURCE="drive"` and the per-archive file ids in `scripts/fetch_checkpoints.sh`;
-> switch to `SOURCE="zenodo"` for the camera-ready. All repository content is
-> already free of author/identifying information.
+ships a `SHA256SUMS-*.txt` for integrity checking. See
+[`checkpoints/MANIFEST.md`](checkpoints/MANIFEST.md) for which weights each
+archive contains.
 
 ---
 

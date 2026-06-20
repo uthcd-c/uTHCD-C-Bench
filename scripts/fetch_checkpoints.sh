@@ -6,12 +6,27 @@
 #   bash scripts/fetch_checkpoints.sh 03         # only writer-independent (2.4 GB)
 #   bash scripts/fetch_checkpoints.sh 01 02      # a subset
 #
+# DOUBLE-BLIND REVIEW: to preserve author anonymity, the checkpoints are not
+# hosted at a fixed public location during review. They will be made available
+# via an anonymous download link UPON REQUEST (e.g., through the handling
+# editor). Once you have that link, set it below and re-run this script.
+#
 # Two hosting sources are supported (set SOURCE below):
 #   * "drive"  : anonymous Google Drive mirror, for the double-blind review period
 #                (upload from an ANONYMOUS Google account; fill the per-archive file ids)
 #   * "zenodo" : the citable archival record, for the camera-ready (fill ZENODO_RECORD)
 set -eu
 cd "$(dirname "$0")/.."                                   # repo root
+
+cat <<'NOTICE'
+------------------------------------------------------------------------------
+uTHCD-C checkpoints — double-blind review
+The pretrained weights are provided via an anonymous link UPON REQUEST
+(e.g., through the handling editor) to preserve author anonymity.
+Set that link (SOURCE + DRIVE_ID/ZENODO_RECORD) in this script, then re-run.
+All paper results are reproducible from scratch WITHOUT the checkpoints.
+------------------------------------------------------------------------------
+NOTICE
 
 # ---- EDIT THIS --------------------------------------------------------------
 SOURCE="zenodo"                 # "drive" during anonymous review, "zenodo" for final
