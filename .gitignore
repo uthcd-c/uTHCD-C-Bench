@@ -1,0 +1,12 @@
+# Large model weights — hosted externally (see scripts/fetch_checkpoints.sh)
+checkpoints/
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Jupyter autosave
+.ipynb_checkpoints/
+
+# OS junk
+.DS_Store

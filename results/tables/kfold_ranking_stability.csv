@@ -1,0 +1,11 @@
+fold_a,fold_b,kendall_tau,p_value,n_models
+fold_0,fold_1,0.5000,0.0752,9
+fold_0,fold_2,0.4444,0.1194,9
+fold_0,fold_3,0.5000,0.0752,9
+fold_0,fold_4,0.6111,0.0247,9
+fold_1,fold_2,0.6111,0.0247,9
+fold_1,fold_3,0.4444,0.1194,9
+fold_1,fold_4,0.3333,0.2595,9
+fold_2,fold_3,0.6111,0.0247,9
+fold_2,fold_4,0.6111,0.0247,9
+fold_3,fold_4,0.6667,0.0127,9

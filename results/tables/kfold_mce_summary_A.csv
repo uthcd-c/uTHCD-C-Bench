@@ -1,0 +1,10 @@
+model,mce_top1_mean,mce_top1_std
+vgg16_bn,1.0,0.0
+googlenet,1.198,0.2777
+swin_t,0.9941,0.0918
+efficientnet_b0,1.2039,0.2922
+squeezenet1_0,1.2545,0.149
+convnext_tiny,1.0088,0.1284
+regnet_x_400mf,1.7889,0.2733
+shufflenet_v2_x0_5,3.1868,0.5855
+mnasnet0_5,4.2151,0.2892

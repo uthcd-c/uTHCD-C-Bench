@@ -1,0 +1,14 @@
+# Core (training + evaluation). Tested with Python 3.10.
+torch>=2.0
+torchvision>=0.15
+numpy>=1.21
+pillow>=9.0
+scikit-learn>=1.0
+scikit-image>=0.19      # Zhang-Suen thinning for the stroke_thinning corruption
+matplotlib>=3.5
+pyyaml>=6.0             # configs for the collapse-mechanism experiment (04)
+
+# Optional
+jupyter                 # to run the representation-analysis notebook (06)
+scipy>=1.7              # CKA / statistics in (06)
+pandas>=1.3            # convenience when inspecting the result tables

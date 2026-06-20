@@ -1,0 +1,17 @@
+init,metric,n_runs,mean,std,min,max
+finetune,clean,15,94.8554,0.1749,94.5906,95.107
+finetune,gaussian_s1,15,1.1305,0.3163,0.7478,1.8732
+finetune,gaussian_s2,15,0.5961,0.0859,0.3953,0.6873
+finetune,gaussian_s3,15,0.6493,0.0323,0.6339,0.7656
+finetune,gaussian_s4,15,0.6517,0.0414,0.641,0.8013
+finetune,gaussian_s5,15,0.6897,0.0753,0.6374,0.8867
+finetune,mean_noisy,15,0.7435,0.0534,0.678,0.8369
+finetune,relative_drop_pct,15,99.2162,0.0564,99.1168,99.2866
+random_init,clean,15,95.7853,0.2461,95.2708,96.1647
+random_init,gaussian_s1,15,95.7853,0.2473,95.2673,96.1504
+random_init,gaussian_s2,15,94.8592,2.9179,84.4486,96.1397
+random_init,gaussian_s3,15,83.2418,21.5823,27.0503,96.1077
+random_init,gaussian_s4,15,61.3516,36.4241,9.9462,96.0756
+random_init,gaussian_s5,15,47.6825,42.0126,4.5903,95.1177
+random_init,mean_noisy,15,76.5841,19.0362,44.5226,95.8862
+random_init,relative_drop_pct,15,20.0475,19.8704,0.2009,53.4483
