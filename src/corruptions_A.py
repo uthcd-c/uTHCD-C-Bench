@@ -1,18 +1,5 @@
 #!/usr/bin/env python3
-"""
-Version A corruption suite, ported faithfully from Notebooks/visualize_corruption.ipynb
-(the implementation that matches the paper figure and R2_C1).
 
-Differences vs version B (eval_kfold_corruption.py):
-  - stroke_thinning: binarise -> Zhang-Suen thinning -> MaxFilter re-dilation
-    (here the Zhang-Suen core uses skimage.morphology.skeletonize(method='zhang'),
-     which implements the same algorithm but compiled/fast).
-  - gaussian_noise sigma [10,20,30,40,60]; shot [60,40,25,15,8];
-    impulse [0.03,0.06,0.12,0.18,0.25]; gaussian_blur r[0.7,1.5,2.5,3.5,5.0];
-    defocus_blur r[1,2,3,4,6]; elastic affine+rotate; pixelate scale-fraction
-    [0.9,0.7,0.5,0.33,0.2] (correctly ordered); contrast [0.7,0.5,0.35,0.2,0.1];
-    scale {128,64,32,16,8}.
-"""
 import numpy as np
 from PIL import Image, ImageFilter
 from skimage.morphology import skeletonize
